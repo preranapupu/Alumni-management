@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<title>ALUMNI DIRECTORY</title>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Alumni directory is empty.";
+}
+</script>
+</head>
+<body 
+bgColor="#dbe7fb"
+
+<form name="userlogin" action="adminhome.html" method=post>
+<center>
+<img src="https://iemgroup.s3.amazonaws.com/uploads/sites/7/2020/10/logo-2.png" height="200" width="400" alt="logo">
+<marquee bgcolor="yellow" behavior=alternate direction="right" width="100%">ALUMNI DIRECTORY </marquee>
+
+<br><br><br>
+<table border="0" cellspacing=0 cellpadding=5 >
+<caption align=bottom>
+<input type="SUBMIT" value=SUBMIT>
+</caption>
+<tr>
+<p><b>ENTER THE ALUMNI NAME AND YEAR OF PASSING.TO MAKE ANY CHANGES IN
+ALUMNI DIRECTORY U MUST BE LOGGED IN.</b></p>
+	<td>ALUMNI NAME :</td>
+<td><input name=" Alumni Name" value="" type=text size="10"></td>
+</tr>
+<tr>
+	<td>YEAR OF PASSING</td>
+	<td><input name="YEAR OF PASSING" value="" type=number size="10"></td>
+</tr>
+</table>
+<br><br><br>
+<p id="demo">Click below to open alumni directory</p>
+
+<button type="button" onclick="myFunction()">Click here</button>
+
+<br><br>
+<a href="userlogin.html">Back to login page</a><br><br>
+<a href="home.html" >Back To Home Page</a><br><br>
+</center>
+</form>
+</body>
+</html>
+
