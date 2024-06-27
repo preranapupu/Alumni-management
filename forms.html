@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+<title>form</title>
+</head>
+<script>  
+function verifyPassword() {  
+  var pw = document.getElementById("pswd").value;  
+  var usname=document.getElementById("usnm").value; 
+  var fo=document.getElementById("fst").value; 
+  var lo=document.getElementById("lst").value; 
+  var numb=document.getElementById("nmb").value; 
+  if(pw == "") {  
+     document.getElementById("message").innerHTML = "**Fill the password please!";  
+     return false;  
+  }  
+   
+  if(pw.length < 8) {  
+     document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";  
+     return false;  
+  }  
+  
+  if(pw.length > 15) {  
+     document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";  
+     return false;  
+  } 
+if(usname =="")
+{ document.getElementById("message").innerHTML = "**Fill the username please!";  
+     return false;  
+}
+if(fo=="")
+{document.getElementById("message").innerHTML = "**Fill the firstname please!";  
+     return false;  
+}
+if(lo=="")
+{document.getElementById("message").innerHTML = "**Fill the lastname please!";  
+     return false;  
+}
+if(numb=="")
+{document.getElementById("message").innerHTML = "**Fill the year please!";  
+     return false;  
+}
+else {  
+     alert("Form Submitted.");  
+  }  
+}  
+</script>    
+<body>
+<form onsubmit ="return verifyPassword()">  
+	<fieldset>
+	<legend>Personal Details</legend>
+	<p>
+		<label>
+		Salutation
+		<br />
+		<select name="salutation">
+			<option>--None--</option>
+			<option>Mr.</option>
+			<option>Ms.</option>
+			<option>Mrs.</option>
+			<option>Dr.</option>
+			<option>Prof.</option>
+		</select>
+		</label>
+	</p>
+
+<p>
+		<label>First name:
+                   (*Required field) <input name="firstName" id="fst" /></label>
+<span id = "message" style="color:red"> </span> <br><br> 
+	</p>
+<p>
+		<label>Last name:
+                   (*Required field) <input name="lastName" id="lst" /></label>
+         <span id = "message" style="color:red"> </span> <br><br> 
+	</p>
+<p><label>Year of passing:
+          (*Required field)<input type="number" id="nmb"></label></p>
+<span id = "message" style="color:red"> </span> <br><br> 
+<p>
+		Gender :
+		<label><input type="radio" name="gender" value="male" /> Male</label>
+		<label><input type="radio" name="gender" value="female" /> Female</label>
+	</p>
+<p>
+		<label>Email:<input type="email" name="email" /></label>
+	</p>
+<p>
+		<label>Date of Birth:<input type="date" name="birthDate"></label>
+	</p>
+<p>
+		<label>
+		What you are doing right now :
+		<br />
+		<textarea name="whatyoudo" cols="30" rows="3"></textarea>
+		</label>
+<br><br>
+	
+<label>
+	USER NAME :
+      (*Required field)
+<input type = "name" id = "usnm" value = "">   </label>
+<span id = "message" style="color:red"> </span> <br><br> 
+<br><br>
+
+<label>Enter password:
+       (*Required field)
+<input type = "password" id = "pswd" value = "">   
+</label>
+<span id = "message" style="color:red"> </span> <br><br> 
+<br><br>
+  
+<input type = "submit" value = "Submit">  
+   
+<button type = "reset" value = "Reset" >Reset</button>
+</form>
+<br><br>
+</fieldset>
+ <a href="userlogin.html">Back to login page </a><br><br>
+</form>
+</body>
+</html>
